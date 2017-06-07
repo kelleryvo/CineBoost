@@ -19,7 +19,7 @@
       </Label>
    </top>
    <bottom>
-      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="Zum Login" BorderPane.alignment="BOTTOM_RIGHT">
+      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="Tickets auswählen" BorderPane.alignment="BOTTOM_RIGHT">
          <font>
             <Font size="24.0" />
          </font>
