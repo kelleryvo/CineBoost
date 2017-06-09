@@ -35,25 +35,25 @@
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Label" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMinAdult" mnemonicParsing="false" text="-" />
                   <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Label" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMinTeen" mnemonicParsing="false" text="-" />
                   <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Label" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMinChild" mnemonicParsing="false" text="-" />
                   <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="Button" />
+                  <Button fx:id="btnMaxChild" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
                </children>
             </HBox>
          </children>

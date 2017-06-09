@@ -34,8 +34,8 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox prefWidth="150.0" promptText="-- Datum --" />
-            <TableView maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0">
+            <ComboBox fx:id="dropDatum" prefWidth="150.0" promptText="-- Datum --" />
+            <TableView fx:id="tableFilm" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0">
               <columns>
                 <TableColumn minWidth="30.0" prefWidth="200.0" text="Film" />
                 <TableColumn prefWidth="100.0" text="Genre" />

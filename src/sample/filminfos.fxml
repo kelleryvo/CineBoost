@@ -43,7 +43,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="22.0" layoutY="10.0" />
+                        <TextField fx:id="fieldName" layoutX="22.0" layoutY="10.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -53,7 +53,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldInfos" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -63,7 +63,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldGenre" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -73,7 +73,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldFSK" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -83,7 +83,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldSpieldauer" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -93,7 +93,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldBewertung" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="256.0" prefHeight="100.0" prefWidth="200.0">
@@ -103,7 +103,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldKinostart" />
                      </children>
                   </HBox>
                </children>
@@ -117,7 +117,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldRegie" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -127,7 +127,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="fieldDarsteller" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -137,7 +137,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgCover" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </HBox>
                </children></VBox>
