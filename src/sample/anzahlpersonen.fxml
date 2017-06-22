@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <Label text="Anzahl Personen" BorderPane.alignment="CENTER">
          <font>
@@ -17,7 +17,7 @@
       </Label>
    </top>
    <bottom>
-      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="weiter" BorderPane.alignment="BOTTOM_CENTER">
+      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="weiter" BorderPane.alignment="BOTTOM_RIGHT">
          <font>
             <Font size="24.0" />
          </font>
@@ -32,28 +32,64 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                <children>
-                  <Label text="Label" />
-                  <Button fx:id="btnMinAdult" mnemonicParsing="false" text="-" />
-                  <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
+                  <Label text="18 Jahre oder älter">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMinAdult" mnemonicParsing="false" text="-">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                <children>
-                  <Label text="Label" />
-                  <Button fx:id="btnMinTeen" mnemonicParsing="false" text="-" />
-                  <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
+                  <Label text="16-18 Jahre">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMinTeen" mnemonicParsing="false" text="-">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                <children>
-                  <Label text="Label" />
-                  <Button fx:id="btnMinChild" mnemonicParsing="false" text="-" />
-                  <Label layoutX="10.0" layoutY="10.0" text="Label" />
-                  <Button fx:id="btnMaxChild" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+" />
+                  <Label text="0-15 Jahre">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMinChild" mnemonicParsing="false" text="-">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Button fx:id="btnMaxChild" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                </children>
             </HBox>
          </children>

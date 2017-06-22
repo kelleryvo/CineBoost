@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <Label text="Filminfos" BorderPane.alignment="CENTER">
          <font>
@@ -36,7 +36,7 @@
          <children>
             <VBox minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0">
                <children>
-                  <HBox minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0">
+                  <HBox minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Name">
                            <font>
@@ -45,8 +45,11 @@
                         </Label>
                         <TextField fx:id="fieldName" layoutX="22.0" layoutY="10.0" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Filminfos">
                            <font>
@@ -55,8 +58,11 @@
                         </Label>
                         <TextField fx:id="fieldInfos" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Genre">
                            <font>
@@ -65,8 +71,11 @@
                         </Label>
                         <TextField fx:id="fieldGenre" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="FSK">
                            <font>
@@ -75,8 +84,11 @@
                         </Label>
                         <TextField fx:id="fieldFSK" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Spieldauer">
                            <font>
@@ -85,8 +97,11 @@
                         </Label>
                         <TextField fx:id="fieldSpieldauer" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Bewertung">
                            <font>
@@ -95,8 +110,11 @@
                         </Label>
                         <TextField fx:id="fieldBewertung" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox layoutX="10.0" layoutY="256.0" prefHeight="100.0" prefWidth="200.0">
+                  <HBox layoutX="10.0" layoutY="256.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Kinostart">
                            <font>
@@ -105,12 +123,15 @@
                         </Label>
                         <TextField fx:id="fieldKinostart" />
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="300.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Regie">
                            <font>
@@ -120,7 +141,7 @@
                         <TextField fx:id="fieldRegie" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label text="Darsteller">
                            <font>
@@ -130,14 +151,18 @@
                         <TextField fx:id="fieldDarsteller" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Label text="Cover">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <ImageView fx:id="imgCover" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Cover">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgCover" fitHeight="322.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
                      </children>
                   </HBox>
                </children></VBox>
