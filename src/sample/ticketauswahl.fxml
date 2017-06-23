@@ -19,7 +19,7 @@
       </Label>
    </top>
    <bottom>
-      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="weiter" BorderPane.alignment="BOTTOM_RIGHT">
+      <Button fx:id="btnSelectTickets" mnemonicParsing="false" text="Weiter" BorderPane.alignment="BOTTOM_RIGHT">
          <font>
             <Font size="24.0" />
          </font>
@@ -32,21 +32,21 @@
       </Button>
    </bottom>
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="TOP_CENTER">
          <children>
             <ComboBox fx:id="dropDatum" prefWidth="150.0" promptText="-- Datum --" />
-            <TableView fx:id="tableFilm" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="906.0">
+            <TableView fx:id="tblFilm" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="1078.0">
               <columns>
-                <TableColumn minWidth="30.0" prefWidth="200.0" text="Film" />
-                <TableColumn prefWidth="100.0" text="Genre" />
-                  <TableColumn prefWidth="100.0" text="Zeit" />
-                  <TableColumn prefWidth="100.0" text="Datum" />
-                  <TableColumn prefWidth="100.0" text="FSK" />
+                <TableColumn minWidth="30.0" prefWidth="395.0" text="Film" />
+                <TableColumn prefWidth="244.0" text="Genre" />
+                  <TableColumn minWidth="0.0" prefWidth="146.0" text="Zeit" />
+                  <TableColumn prefWidth="160.0" text="Datum" />
+                  <TableColumn prefWidth="132.0" text="FSK" />
               </columns>
             </TableView>
          </children>
          <BorderPane.margin>
-            <Insets left="50.0" />
+            <Insets />
          </BorderPane.margin>
       </VBox>
    </center>
