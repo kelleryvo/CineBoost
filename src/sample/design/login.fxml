@@ -19,8 +19,14 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="fieldUsername" promptText="Benutzername" />
-            <TextField fx:id="fieldPassword" promptText="Passwort" />
+            <TextField fx:id="fieldUsername" prefHeight="51.0" prefWidth="765.0" promptText="Benutzername">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <TextField fx:id="fieldPassword" prefHeight="51.0" prefWidth="968.0" promptText="Passwort">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
             <Button fx:id="btnLogin" mnemonicParsing="false" text="Anmelden">
                <font>
                   <Font size="27.0" />
