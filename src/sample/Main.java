@@ -8,12 +8,22 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    public static Stage stage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader .load(getClass().getResource("design/main.fxml"));
-        primaryStage.setTitle("CineBoost");
-        primaryStage.setScene(new Scene(root, 1080, 720));
-        primaryStage.show();
+
+        stage = primaryStage;
+
+        stage.setTitle("CineBoost");
+        stage.setScene(new Scene(root, 1080, 720));
+        stage.show();
+    }
+
+    public static void changeScene(Scene scene){
+        stage.setScene(scene);
+        stage.show();
     }
 
 
