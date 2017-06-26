@@ -43,21 +43,16 @@ public class DbConnection {
         }
     }*/
 
-    public ArrayList<Film> getFilmQuery(String query){
-        ArrayList<Film> list = new ArrayList<>();
+    public ResultSet executeSelect(String query){
+        ResultSet rs = null;
         try {
-            ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()){
-                //Film film = new Film();
-                //list.add(film);
-            }
-
+            rs = stmt.executeQuery(query);
         } catch (SQLException e) {
             System.out.println("SQLException: " + e.getMessage());
             System.out.println("SQLState: " + e.getSQLState());
             System.out.println("VendorError: " + e.getErrorCode());
         }
 
-        return list;
+        return rs;
     }
 }
