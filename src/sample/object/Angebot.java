@@ -11,18 +11,6 @@ public class Angebot {
     private String dimension;
     private String saal;
 
-    public void Create(){
-
-    }
-
-    public void Save(){
-
-    }
-
-    public void Delete(){
-
-    }
-
     public String getDatum() {
         return datum;
     }
@@ -68,6 +56,15 @@ public class Angebot {
     }
 
     public void setSaal(String saal) {
+        this.saal = saal;
+    }
+
+    public Angebot(String datum, String zeit, String film, String sprache, String dimension, String saal) {
+        this.datum = datum;
+        this.zeit = zeit;
+        this.film = film;
+        this.sprache = sprache;
+        this.dimension = dimension;
         this.saal = saal;
     }
 }

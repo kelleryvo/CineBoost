@@ -52,7 +52,6 @@ public class DbConnection {
             System.out.println("SQLState: " + e.getSQLState());
             System.out.println("VendorError: " + e.getErrorCode());
         }
-
         return rs;
     }
 }
