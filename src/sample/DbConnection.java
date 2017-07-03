@@ -15,9 +15,9 @@ public class DbConnection {
     private Connection conn;
     private Statement stmt;
 
-    public DbConnection(String database, String user, String password) {
+    public DbConnection() {
         try {
-            this.conn = DriverManager.getConnection("jdbc:mysql://localhost/" + database + "?user=" + user + "&password=" + password);
+            this.conn = DriverManager.getConnection("jdbc:mysql://localhost/CineBoost?user=root&password=");
             this.stmt = conn.createStatement();
         } catch (SQLException e) {
             System.out.println("SQLException: " + e.getMessage());
@@ -36,7 +36,7 @@ public class DbConnection {
 
     public void setConn(String database, String user, String password) {
         try {
-            this.conn = DriverManager.getConnection("jdbc:mysql://localhost/" + database + "?user=" + user + "&password=" + password);
+            this.conn = DriverManager.getConnection("jdbc:mysql://localhost/CineBoost?user=root&password=");
             this.stmt = conn.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
