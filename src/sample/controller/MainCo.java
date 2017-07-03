@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import sample.DbConnection;
 import sample.Main;
 
 import java.io.IOException;
@@ -20,6 +21,8 @@ public class MainCo {
     @FXML
     public void initialize(){
         btnLogin.setOnAction((event) -> {
+
+            DbConnection db = new DbConnection("cineboost", "root", "");
 
             Parent root = null;
             try {
