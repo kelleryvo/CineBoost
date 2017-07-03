@@ -6,16 +6,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainCo">
-   <top>
-      <Label text="Cine Boost" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainCo">
    <bottom>
       <Button fx:id="btnLogin" mnemonicParsing="false" text="Zum Login" BorderPane.alignment="BOTTOM_RIGHT">
          <font>
@@ -29,11 +23,20 @@
          </BorderPane.margin>
       </Button>
    </bottom>
-   <center>
-      <ImageView fitHeight="575.0" fitWidth="769.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../img/logo.png" />
-         </image>
-      </ImageView>
-   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="Cine Boost">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="575.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>
