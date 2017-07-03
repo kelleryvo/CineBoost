@@ -4,6 +4,15 @@ import java.util.Date;
 
 /**
  * Created by yvokeller on 26.06.17.
+ *
+ * @param id ID des Tickets
+ * @param saalnummer Nummer des Saals
+ * @param sitznummer Nummmer des Sittzes
+ * @param sitzplatznummer
+ * @param begin Beginn des Filmes (Datum)
+ * @param film Name von Film
+ * @param owner ID von Besucher
+ *
  */
 public class Ticket {
     //Attribute

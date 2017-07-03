@@ -2,6 +2,26 @@ package sample.object;
 
 /**
  * Created by denni on 26.06.2017.
+ *
+ * @param produktionsjahr Produktionsjahr von Film
+ * @param filmbeschreibung Beschreibung von Film
+ * @param genre Genre von Film
+ * @param fsk Altersfreigabe von Film
+ * @param filmdauer Dauer von Film
+ * @param filmbewertung Bewertung von Film
+ * @param kinostartKinostart von Film
+ * @param regisseur Regisseur von Film
+ * @param darsteller Darsteller von Film
+ * @return produktionsjahr Rückgabewert für Anforgerung von Produktionsjahr
+ * @return filmbeschreibung Rückgabewert für Anforgerung von Filmbeschreibung
+ * @return genre Rückgabewert für Anforgerung von Genre
+ * @return fsk Rückgabewert für Anforgerung von Altersfreigabe FSK
+ * @return filmdauer Rückgabewert für Anforgerung von Filmdauer
+ * @return filmbewertung Rückgabewert für Anforgerung von Filmbewertung
+ * @return kinostart Rückgabewert für Anforgerung von Kinostart
+ * @return regie Rückgabewert für Anforgerung von Regie
+ * @return darsteller Rückgabewert für Anforgerung von Darsteller
+ *
  */
 public class Film {
     //Variablen

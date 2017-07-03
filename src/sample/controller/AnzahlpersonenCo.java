@@ -12,6 +12,11 @@ import java.io.IOException;
 
 /**
  * Created by marcvollenweider on 26.06.17.
+ *
+ * @param iAdult Wie viele Erwachsene wurden ausgewählt?
+ * @param iTeen Wie viele Teenager wurden ausgewählt?
+ * @param iChild Wie viele Kinder wurden ausgewählt?
+ *
  */
 public class AnzahlpersonenCo {
     public int iAdult = 0;
