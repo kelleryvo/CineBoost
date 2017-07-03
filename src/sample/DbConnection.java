@@ -34,16 +34,16 @@ public class DbConnection {
         return conn;
     }
 
-    /*public void setConn(String database, String user, String password) {
+    public void setConn(String database, String user, String password) {
         try {
             this.conn = DriverManager.getConnection("jdbc:mysql://localhost/" + database + "?user=" + user + "&password=" + password);
             this.stmt = conn.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
-    public ResultSet executeSelect(String query){
+    public ResultSet executeQuery(String query){
         ResultSet rs = null;
         try {
             rs = stmt.executeQuery(query);
@@ -52,7 +52,6 @@ public class DbConnection {
             System.out.println("SQLState: " + e.getSQLState());
             System.out.println("VendorError: " + e.getErrorCode());
         }
-
         return rs;
     }
 }
