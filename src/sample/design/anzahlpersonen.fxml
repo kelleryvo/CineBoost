@@ -41,15 +41,15 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMinAdult" mnemonicParsing="false" text="-">
+                  <Button fx:id="btnRemoveAdult" mnemonicParsing="false" text="-">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                  <Label fx:id="lblAdult" layoutX="10.0" layoutY="10.0" text="0">
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                  <Button fx:id="btnAddAdult" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
@@ -61,15 +61,15 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMinTeen" mnemonicParsing="false" text="-">
+                  <Button fx:id="btnRemoveTeen" mnemonicParsing="false" text="-">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                  <Label fx:id="lblTeen" layoutX="10.0" layoutY="10.0" text="0">
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMaxTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                  <Button fx:id="btnAddTeen" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
@@ -81,15 +81,15 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMinChild" mnemonicParsing="false" text="-">
+                  <Button fx:id="btnRemoveChild" mnemonicParsing="false" text="-">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="0">
+                  <Label fx:id="lblChild" layoutX="10.0" layoutY="10.0" text="0">
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Button fx:id="btnMaxChild" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
+                  <Button fx:id="btnAddChild" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" text="+">
                      <font>
                         <Font size="20.0" />
                      </font></Button>
