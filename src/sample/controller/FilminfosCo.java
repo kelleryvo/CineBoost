@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * Created by marcvollenweider on 26.06.17.
+ *
  */
 public class FilminfosCo {
     @FXML

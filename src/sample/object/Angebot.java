@@ -2,6 +2,20 @@ package sample.object;
 
 /**
  * Created by denni on 26.06.2017.
+ *
+ * @param datum Angabe zum Tag, an dem Film läuft
+ * @param zeit Angabe, um welche Zeit Film läuft
+ * @param film Name des Films
+ * @param sprache Sprache des Films
+ * @param dimension Angabe zur Dimension des Films -> 3D+4D
+ * @param saal Angabe zum Saal
+ * @return datum Rückgabewert für Anforgerung von Datum
+ * @return zeit Rückgabewert für Anforgerung von Zeit
+ * @return film Rückgabewert für Anforgerung von Film
+ * @return sprache Rückgabewert für Anforgerung von Sprache
+ * @return dimension Rückgabewert für Anforgerung von Dimension
+ * @return saal Rückgabewert für Anforgerung von Saal
+ *
  */
 public class Angebot {
     private String datum;

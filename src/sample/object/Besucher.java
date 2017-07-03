@@ -2,6 +2,15 @@ package sample.object;
 
 /**
  * Created by yvokeller on 26.06.17.
+ *
+ * @param id ID von Kunde
+ * @param name Nachname von Kunde
+ * @param vorname Vorname von Kunde
+ * @param wohnort Wohnort von Kunde
+ * @param email E-Mail von Kunde
+ * @param username Benutzername von Kunde
+ * @param password Passwort von Kunde
+ *
  */
 public class Besucher {
     //Attribute

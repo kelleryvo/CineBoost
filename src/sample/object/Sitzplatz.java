@@ -2,6 +2,12 @@ package sample.object;
 
 /**
  * Created by yvokeller on 26.06.17.
+ *
+ * @param sitznummer Nummer vom Sitzplatz z.B. 1A
+ * @param status Verfügbarkeit
+ * @return sitznummer Rückgabewert für Anforgerung von Sitznummer
+ * @return status Rückgabewert für Anforgerung von Verfügbarkeit
+ *
  */
 public class Sitzplatz {
     //Attribute
