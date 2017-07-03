@@ -10,6 +10,7 @@ import sample.Main;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * Created by marcvollenweider on 26.06.17.
@@ -26,9 +27,15 @@ public class MainCo {
 
         ResultSet rs = con.executeQuery("SELECT * FROM Movie");
 
-        btnLogin.setOnAction((event) -> {
+        try {
+            while(rs.next()){
+                System.out.println(rs.getString("movieDescription"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
-            DbConnection db = new DbConnection("cineboost", "root", "");
+        btnLogin.setOnAction((event) -> {
 
             Parent root = null;
             try {
