@@ -9,6 +9,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     public static Stage stage;
+    public static int movieId;
+    public static String ticketId = "";
+    public static int amount = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

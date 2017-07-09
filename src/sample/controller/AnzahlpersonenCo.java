@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sample.Main;
@@ -43,13 +44,23 @@ public class AnzahlpersonenCo {
     public void initialize(){
         btnSelectTickets.setOnAction((event) -> {
 
-            Parent root = null;
-            try {
-                root = FXMLLoader.load(getClass().getResource("../design/sitzlplatz.fxml"));
-            } catch (IOException e) {
+            if (iAdult == 0 && iChild == 0 && iTeen == 0) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information");
+                alert.setHeaderText("Anzahl ungültig");
+                alert.setContentText("Bitte geben Sie die Anzahl von Person an");
+                alert.showAndWait();
+            }else{
+                Main.amount = iAdult + iTeen + iChild;
 
+                Parent root = null;
+                try {
+                    root = FXMLLoader.load(getClass().getResource("../design/sitzlplatz.fxml"));
+                } catch (IOException e) {
+
+                }
+                Main.changeScene(new Scene(root, 1080, 720));
             }
-            Main.changeScene(new Scene(root, 1080, 720));
         });
 
         btnRemoveAdult.setOnAction((event) -> {
