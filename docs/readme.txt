@@ -13,7 +13,7 @@
   The Latest Version
   ------------------
 
-  Details von den aktuellsten Versionen kann man in eine Git-Repository
+  Details von den aktuellsten Versionen kann man in einem Git-Repository
   anschauen und herunterladen. Folgender Link:
   https://github.com/kelleryvo/CineBoost
 
@@ -21,7 +21,7 @@
   -------------
 
   Die Dokumentation ist als Word Datei abgespeichert.
-  Unter docs/ befindet sich alle aktuelle Dokumentationen.
+  Unter docs/ befinden sich alle aktuellen Dokumentationen.
   Folgender Link:
   https://github.com/kelleryvo/CineBoost/tree/master/docs
 
@@ -32,7 +32,7 @@
   - mysql-connector-java-5.1.38-bin.jar
     Webseite: http://www.java2s.com/Code/Jar/m/Downloadmysqlconnectorjava5123binjar.htm
 
-  Das Projekt wurde in InteliJ IDEA von JetBrains implementiert:
+  Das Projekt wurde in IntelliJ IDEA von JetBrains implementiert:
   - Webseite: https://www.jetbrains.com/idea/
 
   Für das Projekt nutzen wir Java SDK 1.8.0_101.
@@ -42,8 +42,9 @@
   --------
   
   Der SQL Dump befindet sich auch im Git-Repository.
-  SQL Dump in einem Webservie importieren und man hat die ganze Datenbank Struktur
-  plus Testdaten.
+  SQL Dump in einen Webserver importieren und man hat die ganze Datenbank Struktur
+  plus Testdaten. Folgender Link:
+  https://github.com/kelleryvo/CineBoost/tree/master/Database
 
   Folgende Tabellen befinden sich in diesem Dump:
   ┌ CinemaHall
@@ -115,3 +116,10 @@
   |--- debitcardNumber
   └--- discount
 
+  Creator
+  ------------
+  
+  - Projectmanagement:      Yvo Keller
+  - Java Developer:         Nico Lutz, Marc Vollenweider
+  - GUI/JavaFX Developer:   Dennis Schaeppi
+  - Database Developer:     Vithun Vamathevan
