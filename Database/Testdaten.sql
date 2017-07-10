@@ -1,3 +1,5 @@
+USE cineboost;
+
 INSERT INTO Visitor (name,surname,birthdate,email,password,adress,postcode,debitcardNumber,discount) VALUES
 ('Vithun','Vamathevan',1998-12-14,'vithun.vamathevan@gmail.com','test','Ringstrasse 121','8107','4000123456781234','0'),
 ('Brigitte','Schwartz',1938-07-10,'brisch@cuvox.de','test','Wolfensbergstrasse 58','3762','4716332219668047','25'),
@@ -26,12 +28,12 @@ INSERT INTO CinemaHall (cinemaHallName,screen) VALUES
 ('Saal 3','Large');
 
 INSERT INTO Offer (movie_FK,cinemahall_FK,title,movieStart,movieLanguage,dimension) VALUES
-(1,1,'Montag','15:30','Deutsch','3D'),
-(2,2,'Dienstag','17:30','Deutsch','2D'),
-(3,3,'Mittwoch','19:30','Deutsch','3D'),
-(4,1,'Donnerstag','19:30','Englisch','2D'),
-(5,2,'Freitag','15:30','Englisch','3D'),
-(6,3,'Samstag','17:30','Englisch','2D');
+(1,1,'Montag','2017-07-19 13:17:00','Deutsch','3D'),
+(2,2,'Dienstag','2017-07-19 13:17:00','Deutsch','2D'),
+(3,3,'Mittwoch','2017-07-19 13:17:00','Deutsch','3D'),
+(4,1,'Donnerstag','2017-07-19 13:17:00','Englisch','2D'),
+(5,2,'Freitag','2017-07-19 13:17:00','Englisch','3D'),
+(6,3,'Samstag','2017-07-19 13:17:00','Englisch','2D');
 
 INSERT INTO Seat (cinemaHall_FK,seatRow,seatNr) VALUES
 /* Saak 1 (Klein) 5X10 */
@@ -69,11 +71,11 @@ INSERT INTO Offer_Seat (offer_FK,seat_FK) VALUES
 (6,6);
 
 INSERT INTO Tickets (visitor_FK,staff_FK,offer_FK,seat_FK) VALUES
-(1,3,1,123),
-(2,0,2,12),
+(1,3,1,13),
+(2,1,2,12),
 (3,5,3,54),
 (4,3,4,67),
-(5,0,5,23);
+(5,1,5,23);
 
 INSERT INTO Reservation (ticket_FK) VALUES
 (1),

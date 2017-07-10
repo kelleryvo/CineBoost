@@ -8,6 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import sample.DbConnection;
 import sample.Main;
 
 import java.io.IOException;
@@ -38,6 +39,8 @@ public class SitzlplatzCo {
 
         amount.setText("Noch " + num.toString() + " Sitzplätze offen");
 
+        /*DbConnection conn = new DbConnection();
+        conn.executeQuery("SELECT ")*/
         for (Button buttoni : buttons){
             buttoni.setStyle("-fx-background-color: #FFF");
             buttoni.setOnAction((event) -> {
