@@ -100,12 +100,20 @@ public class PaymentCo {
 
         btnLogin.setOnAction((event) -> {
 
-
             DbConnection conn = new DbConnection();
 
             for (String seat : Main.seats) {
-                String query = "INSERT INTO tickets (visitor_fk, offer_fk, seat_fk) " +
-                        "VALUES (" + Main.userid + ", " + Main.ticketId + ", " + seat + ")";
+
+                ResultSet rs2 = conn.executeQuery("Select id from Seat where seatName='" + seat + "'");
+
+                String query = null;
+                try {
+                    rs2.next();
+                    query = "INSERT INTO tickets (visitor_fk, offer_fk, seat_fk) " +
+                            "VALUES (" + Main.userid + ", " + Main.ticketId + ", " + rs2.getString("id") + ")";
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
                 try {
                     conn.getStmt().execute(query);
                 } catch (SQLException e) {
