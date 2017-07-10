@@ -27,6 +27,7 @@ public class LoginCo {
     public Button btnLogin;
     public TextField fieldUsername;
     public PasswordField fieldPassword;
+    public int id = 0;
 
     @FXML
     public void initialize(){
@@ -48,6 +49,7 @@ public class LoginCo {
                     String pwT = rs.getString("password");
                     if (user.equals(nameT) && pw.equals(pwT)){
                         go = true;
+                        id = rs.getInt("id");
                     }
                 }
             } catch (SQLException e) {
@@ -55,6 +57,7 @@ public class LoginCo {
             }
 
             if (go){
+                Main.userid = id;
                 Parent root = null;
                 try {
                     root = FXMLLoader.load(getClass().getResource("../design/payment.fxml"));

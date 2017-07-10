@@ -1,5 +1,8 @@
 package sample.controller;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +31,6 @@ public class PaymentCo {
     //Alle Components
     public Button btnLogin;
     public Button btnÄndern;
-    public TextField fieldMovie;
     public TextField fieldCreditCard;
     public TextField fieldTotal;
     public TableView tblZahlung;
@@ -41,13 +43,26 @@ public class PaymentCo {
 
         DbConnection con = new DbConnection();
 
-        ResultSet rs = con.executeQuery("SELECT * FROM Movie WHERE '"+Main.movieId+"'");
+        ResultSet rs = con.executeQuery("SELECT * FROM Visitor");
+
+        Double total = Main.amount*12.5;
+        fieldTotal.setText(total.toString());
 
         try {
             while(rs.next()){
-                fieldMovie.setText(rs.getString("name"));
-                Double total = Main.amount*12.50;
-                fieldTotal.setText(total.toString());
+                if (rs.getInt("id") == Main.userid) {
+                    ObservableList<String> list = FXCollections.observableArrayList();
+
+                    list.add(rs.getString("name") + " " + rs.getString("surname"));
+                    Integer seat = Main.seats.size();
+                    list.add(seat.toString());
+                    list.add(fieldTotal.getText());
+
+                    colPerson.setCellValueFactory(data -> new SimpleStringProperty(list.get(0)));
+                    colAnzahl.setCellValueFactory(data -> new SimpleStringProperty(list.get(1)));
+                    colPreis.setCellValueFactory(data -> new SimpleStringProperty(list.get(2)));
+                    tblZahlung.setItems(list);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
