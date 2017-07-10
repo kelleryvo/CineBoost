@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS Seat(
 	id int auto_increment not null,
 	cinemaHall_FK int not null,
 	seatRow int not null,
+	seatName varchar(255) not null,
 	seatNr int not null,
 	PRIMARY KEY (id),
 	FOREIGN KEY (cinemaHall_FK) REFERENCES CinemaHall(id)
