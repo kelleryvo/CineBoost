@@ -52,12 +52,6 @@
                     </rowConstraints>
                      <children>
                         <Button fx:id="btnÄndern" mnemonicParsing="false" text="Ändern..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label text="Film">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="fieldMovie" prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" />
                         <TextField fx:id="fieldCreditCard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="Kreditkarte" GridPane.rowIndex="1">
                            <font>
