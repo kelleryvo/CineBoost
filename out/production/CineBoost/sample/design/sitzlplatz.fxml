@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SitzlplatzCo">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SitzlplatzCo">
    <top>
       <Label text="Sitzplatz" BorderPane.alignment="CENTER">
          <font>
@@ -17,17 +17,22 @@
       </Label>
    </top>
    <bottom>
-      <Button fx:id="btnSelectTickets" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Weiter" BorderPane.alignment="BOTTOM_RIGHT">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets bottom="10.0" right="10.0" top="10.0" />
-         </BorderPane.margin>
-         <padding>
-            <Insets left="20.0" right="20.0" />
-         </padding>
-      </Button>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="Label" fx:id="amount" />
+            <Button fx:id="btnSelectTickets" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Weiter" BorderPane.alignment="BOTTOM_RIGHT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
    </bottom>
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">

@@ -58,6 +58,12 @@ public class SitzlplatzCo {
         btnSelectTickets.setOnAction((event) -> {
 
             if (num == 0) {
+                for (Button buttoni : buttons){
+                    if (buttoni.getStyle() == "-fx-background-color: #1976D2") {
+                        Main.seats.add(buttoni.getText());
+                    }
+                }
+
                 Parent root = null;
                 try {
                     root = FXMLLoader.load(getClass().getResource("../design/login.fxml"));

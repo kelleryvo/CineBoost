@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
 
     public static Stage stage;
     public static int movieId;
     public static String ticketId = "";
     public static int amount = 0;
+    public static ArrayList<String> seats = new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
