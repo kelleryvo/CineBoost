@@ -46,28 +46,72 @@
   plus Testdaten.
 
   Folgende Tabellen befinden sich in diesem Dump:
-   - CinemaHall
-      - id
-      - cinemaHallName
-      - screen
-   - Movie
-      - id
-      - name
-      - productionsYear
-      - movieDescription
-      - genre
-      - trailer
-      - fsk
-      - duration
-      - movieRating
-      - director
-      - actor
-   - Offer
-      
-   - Offer_Seat
-   - Reservation
-   - Seat
-   - Staff
-   - Tickets
-   - Visitor
+  ┌ CinemaHall
+  |--- id
+  |--- cinemaHallName
+  └--- screen
+
+  ┌ Movie
+  |--- id
+  |--- name
+  |--- productionsYear
+  |--- movieDescription
+  |--- genre
+  |--- trailer
+  |--- fsk
+  |--- duration
+  |--- movieRating
+  |--- director
+  └--- actor
+
+  ┌ Offer
+  |--- id
+  |--- movie_FK
+  |--- title
+  |--- cinemahall_FK
+  |--- movieStart
+  |--- movieLanguage
+  └--- dimension
+
+  ┌ Offer_Seat
+  |--- id
+  |--- offer_FK
+  └--- seat_FK
+
+  ┌ Reservation
+  |--- id
+  └--- ticket_FK
+
+  ┌ Seat
+  |--- id
+  |--- cinemaHall_FK
+  |--- seatRow
+  └--- seatNr
+
+  ┌ Staff
+  |--- id
+  |--- name
+  |--- surname
+  |--- birthdate
+  |--- username
+  └--- password
+
+  ┌ Tickets
+  |--- id
+  |--- visitor_fk
+  |--- staff_fk  
+  |--- offer_fk  
+  └--- seat_fk
+
+  ┌ Visitor
+  |--- id
+  |--- name
+  |--- surname
+  |--- birthdate
+  |--- email
+  |--- password
+  |--- adress
+  |--- postcode
+  |--- debitcardNumber
+  └--- discount
 
