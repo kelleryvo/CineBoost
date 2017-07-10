@@ -12,7 +12,7 @@ public class Main extends Application {
 
     public static Stage stage;
     public static int movieId;
-    public static String ticketId = "";
+    public static int ticketId = 0;
     public static int amount = 0;
     public static int userid = 0;
     public static ArrayList<String> seats = new ArrayList<>();

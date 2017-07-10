@@ -18,12 +18,21 @@ package sample.object;
  *
  */
 public class Angebot {
+    private int id;
     private String datum;
     private String zeit;
     private String film;
     private String sprache;
     private String dimension;
     private String saal;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getDatum() {
         return datum;
@@ -73,7 +82,8 @@ public class Angebot {
         this.saal = saal;
     }
 
-    public Angebot(String datum, String zeit, String film, String sprache, String dimension, String saal) {
+    public Angebot(int id, String datum, String zeit, String film, String sprache, String dimension, String saal) {
+        this.id = id;
         this.datum = datum;
         this.zeit = zeit;
         this.film = film;

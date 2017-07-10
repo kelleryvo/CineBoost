@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.DbConnection;
 import sample.Main;
+import sample.object.Angebot;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -36,7 +37,7 @@ public class TicketauswahlCo {
     @FXML
     //Alle Components
     public Button btnSelectTickets;
-    public TableView<String> tblFilm;
+    public TableView<Angebot> tblFilm;
     public ComboBox dropDatum;
 
     @FXML
@@ -46,57 +47,74 @@ public class TicketauswahlCo {
 
         ResultSet rs = con.executeQuery("SELECT * FROM Movie AS mo INNER JOIN Offer AS of ON mo.id = of.movie_FK WHERE mo.id = "+Main.movieId+"");
         ObservableList<String> options = FXCollections.observableArrayList();
+        ObservableList<Angebot> angebots = FXCollections.observableArrayList();
 
         try {
             while(rs.next()){
-
-                ObservableList<String> list = FXCollections.observableArrayList();
-
-                list.add(rs.getString("name"));
-                list.add(rs.getString("genre"));
-                list.add(rs.getString("movieStart"));
-                list.add(rs.getString("fsk"));
+                Angebot angebot = new Angebot(rs.getInt("id"), rs.getString("movieStart"), "", rs.getString("name"), rs.getString("genre"), rs.getString("fsk"), "");
 
                 String date = rs.getString("movieStart");
                 date = date.substring(0, Math.min(date.length(), 10));
 
                 options.add(date);
 
-                TableColumn<String, String> col1 = new TableColumn<>();
+                TableColumn col1 = new TableColumn<>();
                 col1.setText("Film");
                 col1.setPrefWidth(395);
-                TableColumn<String, String> col2 = new TableColumn<>();
+                TableColumn col2 = new TableColumn<>();
                 col2.setText("Genre");
                 col2.setPrefWidth(244);
-                TableColumn<String, String> col3 = new TableColumn<>();
+                TableColumn col3 = new TableColumn<>();
                 col3.setText("Datum und Uhrzeit");
                 col3.setPrefWidth(290);
-                TableColumn<String, String> col4 = new TableColumn<>();
+                TableColumn col4 = new TableColumn<>();
                 col4.setText("FSK");
                 col4.setPrefWidth(150);
                 tblFilm.getColumns().addAll(col1, col2, col3, col4);
 
-                col1.setCellValueFactory(data -> new SimpleStringProperty(list.get(0)));
-                col2.setCellValueFactory(data -> new SimpleStringProperty(list.get(1)));
-                col3.setCellValueFactory(data -> new SimpleStringProperty(list.get(2)));
-                col4.setCellValueFactory(data -> new SimpleStringProperty(list.get(3)));
-                tblFilm.setItems(list);
+                col1.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Angebot, String>, ObservableValue<String>>() {
+                    @Override
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Angebot, String> c) {
+                        return new SimpleStringProperty(c.getValue().getFilm());
+                    }
+                });
+                col2.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Angebot, String>, ObservableValue<String>>() {
+                    @Override
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Angebot, String> c) {
+                        return new SimpleStringProperty(c.getValue().getSprache());
+                    }
+                });
+                col3.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Angebot, String>, ObservableValue<String>>() {
+                    @Override
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Angebot, String> c) {
+                        return new SimpleStringProperty(c.getValue().getDatum());
+                    }
+                });
+                col4.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Angebot, String>, ObservableValue<String>>() {
+                    @Override
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Angebot, String> c) {
+                        return new SimpleStringProperty(c.getValue().getDimension());
+                    }
+                });
+
+                angebots.add(angebot);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        tblFilm.setItems(angebots);
 
         dropDatum.getItems().add(options);
 
         tblFilm.setOnMouseClicked((MouseEvent event) -> {
             if(event.getButton().equals(MouseButton.PRIMARY)){
-                Main.ticketId = tblFilm.getSelectionModel().getSelectedItem();
+                Main.ticketId = tblFilm.getSelectionModel().getSelectedItem().getId();
             }
         });
 
         btnSelectTickets.setOnAction((event) -> {
 
-            if (Main.ticketId != "") {
+            if (Main.ticketId != 0) {
                 Parent root = null;
                 try {
                     root = FXMLLoader.load(getClass().getResource("../design/anzahlpersonen.fxml"));
